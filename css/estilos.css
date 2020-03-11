@@ -14,7 +14,7 @@ h1,h2,h3,h4,h5,h6{
 
 header, #titulo, #imagen{
     background: black;
-    width: 90%;
+    width: 100%;
     height: 100px;
     }
 
@@ -41,7 +41,7 @@ img{
 
 
 header{
-    width: 90%;
+    width: 100%;
     height: 300%
 }
 
@@ -61,7 +61,7 @@ h3{
 .contenedor{
     margin: 0 auto;
     width: 80%;
-    max-width: 1000;
+    max-width: 1050;
     box-sizing: border-box;
     align-content: center;  
     
@@ -69,7 +69,7 @@ h3{
 
 
 .contenido{
-width: 90%;        
+width: 100%;        
 background-color: aliceblue;
     
 } 
@@ -79,7 +79,7 @@ background-color: aliceblue;
 
 .cuadro1{
     background-color: aliceblue;
-    width: 35%;
+    width: 33%;
     display: inline-block;
     float: left;
     text-align: center;
@@ -88,7 +88,7 @@ background-color: aliceblue;
 .cuadro2{
     background-color: black;
     color: antiquewhite;
-    width: 30%;
+    width: 33%;
     float: left;
     display: inline-block;
     text-align: center;
@@ -97,7 +97,7 @@ background-color: aliceblue;
 
 .cuadro3{
     background-color: aliceblue;
-    width: 35%;
+    width: 33%;
     display: inline-block;
     float: left;
     text-align: center;
