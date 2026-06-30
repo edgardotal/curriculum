@@ -8,107 +8,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilos.css">
   <style>
-    /* ===== SOBRESCRITURA DE ESTILOS PARA CORREGIR POSICIÓN ===== */
-    
-    /* Forzamos que el header use flex para alinear todo a la izquierda */
-    .titulo {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: flex-start !important;
-      flex-wrap: wrap !important;
-      gap: 20px !important;
-      padding: 15px !important;
-    }
-
-    /* Eliminamos cualquier flotante o posición absoluta en avatar */
-    .avatar {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: flex-start !important;
-      flex-wrap: wrap !important;
-      gap: 15px !important;
-      float: none !important;
-      position: relative !important;
-      width: auto !important;
-    }
-
-    /* El contenedor del video ocupa solo su espacio */
-    .content-all {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: flex-start !important;
-      float: none !important;
-      width: auto !important;
-      min-height: 160px !important;
-    }
-
-    .content-carrousel {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: flex-start !important;
-      float: none !important;
-      width: auto !important;
-      min-height: 160px !important;
-    }
-
-    /* Video con tamaño y posición fijos */
-    .content-carrousel video {
-      width: 40% !important;
-      max-width: 420px !important;
-      min-width: 200px !important;
-      height: auto !important;
-      border-radius: 8px !important;
-      display: block !important;
-      margin: 0 !important;
-      float: none !important;
-      position: relative !important;
-      top: auto !important;
-      left: auto !important;
-    }
-
-    /* La foto de perfil */
-    .avatar > img {
-      float: none !important;
-      display: block !important;
-      margin: 0 !important;
-      max-width: 120px !important;
-      height: auto !important;
-    }
-
-    /* El texto del nombre */
-    .titulo .text {
-      float: none !important;
-      margin-left: 5px !important;
-      padding: 0 !important;
-    }
-
-    .titulo .text h2,
-    .titulo .text h4 {
-      margin: 0 !important;
-      padding: 0 !important;
-      line-height: 1.3 !important;
-    }
-
-    /* Responsive para móviles */
-    @media (max-width: 768px) {
-      .content-carrousel video {
-        width: 50% !important;
-        max-width: 280px !important;
-        min-width: 140px !important;
-      }
-      .avatar > img {
-        max-width: 80px !important;
-      }
-      .titulo {
-        gap: 10px !important;
-        padding: 10px !important;
-      }
-      .avatar {
-        gap: 10px !important;
-      }
-    }
-
-    /* Resto de estilos originales que no interfieren */
+    /* pequeños ajustes para mantener la legibilidad */
     .contenido .cuadro1 ul,
     .contenido .cuadro2 ul,
     .contenido .cuadro3 ul,
@@ -121,6 +21,35 @@
     .contenido .cuadro4 h4 {
       margin-top: 0.5rem;
       margin-bottom: 0.2rem;
+    }
+    .titulo .text h2 {
+      margin-bottom: 0;
+    }
+    .titulo .text h4 {
+      margin-top: 0;
+    }
+
+    /* Mover el video más a la izquierda */
+    .content-all {
+      margin-left: -20px;  /* Mueve todo el contenedor a la izquierda */
+    }
+
+    .content-carrousel video {
+      width: 40%;
+      max-width: 420px;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .content-all {
+        margin-left: -10px;
+      }
+      .content-carrousel video {
+        width: 50%;
+        max-width: 280px;
+      }
     }
   </style>
 </head>
@@ -137,16 +66,17 @@
       </div>
     </div>
     <img src="imagenes/yo.jpg" alt="Edgardo Talavera">
-    <div class="text" style="margin-left: 5px;">
-      <h2>Edgardo Talavera</h2>
-      <h4>Tech Lead · Senior Full Stack Developer</h4>
-    </div>
+  </div>
+  <div class="text" style="margin-left: 20px;">
+    <h2>Edgardo Talavera</h2>
+    <h4>Tech Lead · Senior Full Stack Developer</h4>
+    <br/>
   </div>
 </header>
 
-<!-- ====== RESTO DEL CONTENIDO SIN CAMBIOS ====== -->
 <div class="contenido">
 
+  <!-- CUADRO 1: EXPERIENCIA -->
   <div class="cuadro1">
     <br>
     <h4>EXPERIENCE</h4>
@@ -168,6 +98,7 @@
     </ul>
   </div>
 
+  <!-- CUADRO 2: SKILLS -->
   <div class="cuadro2">
     <br>
     <h4>SKILLS</h4>
@@ -213,6 +144,7 @@
     </ul>
   </div>
 
+  <!-- CUADRO 3: OS & NETWORKS -->
   <div class="cuadro3">
     <br>
     <h4>OS &amp; NETWORKS</h4>
@@ -235,6 +167,7 @@
     </ul>
   </div>
 
+  <!-- CUADRO 4: EDUCATION -->
   <div class="cuadro4">
     <br>
     <h4>EDUCATION &amp; CERTIFICATIONS</h4>
@@ -253,6 +186,7 @@
     </ul>
   </div>
 
+  <!-- FOOTER -->
   <footer>
     <br/>
     <h4>General Information</h4>
