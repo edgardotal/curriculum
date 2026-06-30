@@ -29,10 +29,10 @@
       margin-top: 0;
     }
 
-    /* Ajustes para el video */
+    /* Ajustes para el video - 50% más grande */
     .content-carrousel video {
-      max-width: 280px;      /* Ancho máximo para que no se estire */
-      max-height: 160px;     /* Altura máxima para que no desborde */
+      max-width: 420px;      /* 280px * 1.5 = 420px */
+      max-height: 240px;     /* 160px * 1.5 = 240px */
       width: auto;
       height: auto;
       border-radius: 8px;    /* Opcional: bordes redondeados */
@@ -40,11 +40,11 @@
       margin: 0 auto;
     }
 
-    /* Para pantallas muy pequeñas */
+    /* Para pantallas muy pequeñas - también 50% más grande */
     @media (max-width: 768px) {
       .content-carrousel video {
-        max-width: 200px;
-        max-height: 120px;
+        max-width: 300px;    /* 200px * 1.5 = 300px */
+        max-height: 180px;   /* 120px * 1.5 = 180px */
       }
     }
   </style>
