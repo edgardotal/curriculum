@@ -29,22 +29,36 @@
       margin-top: 0;
     }
 
-    /* Ajustes para el video - 40% más grande y 20% más ancho */
+    /* Ajustes para el video - tamaño y posición */
+    .content-carrousel {
+      display: flex;
+      align-items: center;      /* Centra verticalmente el video */
+      justify-content: center;  /* Centra horizontalmente el video */
+      height: 100%;            /* Ocupa toda la altura del contenedor */
+      min-height: 180px;       /* Altura mínima para que no se achique */
+    }
+
     .content-carrousel video {
-      max-width: 600px;      /* 420px * 1.4 = 588px → 600px (redondeado) */
-      max-height: 336px;     /* 240px * 1.4 = 336px */
+      max-width: 600px;
+      max-height: 336px;
       width: auto;
       height: auto;
       border-radius: 8px;
       display: block;
       margin: 0 auto;
+      /* Eliminamos cualquier margen superior que lo empuje hacia abajo */
+      margin-top: -10px;       /* Sube el video ligeramente */
     }
 
-    /* Para pantallas muy pequeñas - también 40% más grande */
+    /* Para pantallas muy pequeñas */
     @media (max-width: 768px) {
+      .content-carrousel {
+        min-height: 140px;
+      }
       .content-carrousel video {
-        max-width: 420px;    /* 300px * 1.4 = 420px */
-        max-height: 252px;   /* 180px * 1.4 = 252px */
+        max-width: 420px;
+        max-height: 252px;
+        margin-top: -5px;
       }
     }
   </style>
@@ -72,7 +86,7 @@
 
 <div class="contenido">
 
-  <!-- CUADRO 1: EXPERIENCIA (actualizada con datos del documento) -->
+  <!-- CUADRO 1: EXPERIENCIA -->
   <div class="cuadro1">
     <br>
     <h4>EXPERIENCE</h4>
@@ -101,7 +115,7 @@
          </ul>
   </div>
 
-  <!-- CUADRO 2: SKILLS (frontend, backend, bases de datos, etc.) -->
+  <!-- CUADRO 2: SKILLS -->
   <div class="cuadro2">
     <br>
     <h4>SKILLS</h4>
@@ -155,7 +169,7 @@
     </ul>
   </div>
 
-  <!-- CUADRO 3: INFRAESTRUCTURA, REDES Y SISTEMAS OPERATIVOS -->
+  <!-- CUADRO 3: OS & NETWORKS -->
   <div class="cuadro3">
     <br>
     <h4>OS &amp; NETWORKS</h4>
@@ -178,7 +192,7 @@
     </ul>
   </div>
 
-  <!-- CUADRO 4: EDUCACIÓN Y CERTIFICACIONES (actualizado) -->
+  <!-- CUADRO 4: EDUCATION -->
   <div class="cuadro4">
     <br>
     <h4>EDUCATION &amp; CERTIFICATIONS</h4>
@@ -197,7 +211,7 @@
     </ul>
   </div>
 
-  <!-- FOOTER con datos de contacto actualizados -->
+  <!-- FOOTER -->
   <footer>
     <br/>
     <h4>General Information</h4>
