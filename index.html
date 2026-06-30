@@ -29,25 +29,24 @@
       margin-top: 0;
     }
 
-    /* Ajustes para el video - tamaño y posición */
+    /* Ajustes para el video - 40% de ancho y posición centrada */
     .content-carrousel {
       display: flex;
-      align-items: center;      /* Centra verticalmente el video */
-      justify-content: center;  /* Centra horizontalmente el video */
-      height: 100%;            /* Ocupa toda la altura del contenedor */
-      min-height: 180px;       /* Altura mínima para que no se achique */
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      min-height: 180px;
+      width: 100%;
     }
 
     .content-carrousel video {
-      max-width: 600px;
-      max-height: 336px;
-      width: auto;
-      height: auto;
+      width: 40%;            /* 40% del ancho del contenedor */
+      max-width: 600px;      /* Límite máximo para que no se pase */
+      height: auto;          /* Mantiene la proporción */
       border-radius: 8px;
       display: block;
       margin: 0 auto;
-      /* Eliminamos cualquier margen superior que lo empuje hacia abajo */
-      margin-top: -10px;       /* Sube el video ligeramente */
+      margin-top: -10px;     /* Sube el video ligeramente */
     }
 
     /* Para pantallas muy pequeñas */
@@ -56,8 +55,7 @@
         min-height: 140px;
       }
       .content-carrousel video {
-        max-width: 420px;
-        max-height: 252px;
+        width: 50%;          /* En móviles ocupa un poco más para verse bien */
         margin-top: -5px;
       }
     }
