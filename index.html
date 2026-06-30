@@ -29,34 +29,59 @@
       margin-top: 0;
     }
 
-    /* Ajustes para el video - 40% de ancho y posición centrada */
+    /* Ajustes para el video - centrado correctamente */
+    .avatar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;  /* Alinea todo a la izquierda */
+      gap: 15px;                   /* Espacio entre elementos */
+      flex-wrap: wrap;             /* Permite que se acomoden en móviles */
+    }
+
+    .content-all {
+      flex: 0 0 auto;              /* No se estira, ocupa solo su espacio */
+      display: flex;
+      align-items: center;
+      min-height: 180px;
+    }
+
     .content-carrousel {
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100%;
       min-height: 180px;
-      width: 100%;
     }
 
     .content-carrousel video {
-      width: 40%;            /* 40% del ancho del contenedor */
-      max-width: 600px;      /* Límite máximo para que no se pase */
-      height: auto;          /* Mantiene la proporción */
+      width: 40%;
+      max-width: 500px;
+      height: auto;
       border-radius: 8px;
       display: block;
-      margin: 0 auto;
-      margin-top: -10px;     /* Sube el video ligeramente */
+      margin: 0;
+    }
+
+    /* Ajuste para la foto de perfil */
+    .avatar > img {
+      flex: 0 0 auto;
+      margin-left: 0;
     }
 
     /* Para pantallas muy pequeñas */
     @media (max-width: 768px) {
+      .content-all {
+        min-height: 140px;
+      }
       .content-carrousel {
         min-height: 140px;
       }
       .content-carrousel video {
-        width: 50%;          /* En móviles ocupa un poco más para verse bien */
-        margin-top: -5px;
+        width: 50%;
+        max-width: 300px;
+      }
+      .avatar {
+        gap: 10px;
       }
     }
   </style>
@@ -74,11 +99,11 @@
       </div>
     </div>
     <img src="imagenes/yo.jpg" alt="Edgardo Talavera">
-  </div>
-  <div class="text" style="margin-left: 20px;">
-    <h2>Edgardo Talavera</h2>
-    <h4>Tech Lead · Senior Full Stack Developer</h4>
-    <br/>
+    <div class="text" style="margin-left: 20px;">
+      <h2>Edgardo Talavera</h2>
+      <h4>Tech Lead · Senior Full Stack Developer</h4>
+      <br/>
+    </div>
   </div>
 </header>
 
