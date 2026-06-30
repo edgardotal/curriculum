@@ -28,6 +28,25 @@
     .titulo .text h4 {
       margin-top: 0;
     }
+
+    /* Ajustes para el video */
+    .content-carrousel video {
+      max-width: 280px;      /* Ancho máximo para que no se estire */
+      max-height: 160px;     /* Altura máxima para que no desborde */
+      width: auto;
+      height: auto;
+      border-radius: 8px;    /* Opcional: bordes redondeados */
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Para pantallas muy pequeñas */
+    @media (max-width: 768px) {
+      .content-carrousel video {
+        max-width: 200px;
+        max-height: 120px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -36,8 +55,7 @@
   <div class="avatar">
     <div class="content-all">
       <div class="content-carrousel">
-        <!-- Video reemplazando el carrusel de imágenes -->
-        <video width="100%" height="auto" controls autoplay muted loop playsinline>
+        <video controls autoplay muted loop playsinline>
           <source src="imagenes/presentacion.mp4" type="video/mp4">
           Tu navegador no soporta el elemento de video.
         </video>
