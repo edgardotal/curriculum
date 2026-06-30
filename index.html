@@ -29,26 +29,59 @@
       margin-top: 0;
     }
 
-    /* Mover el video más a la izquierda */
+    /* Ajustes para el video - centrado correctamente */
+    .avatar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;  /* Alinea todo a la izquierda */
+      gap: 15px;                   /* Espacio entre elementos */
+      flex-wrap: wrap;             /* Permite que se acomoden en móviles */
+    }
+
     .content-all {
-      margin-left: -20px;  /* Mueve todo el contenedor a la izquierda */
+      flex: 0 0 auto;              /* No se estira, ocupa solo su espacio */
+      display: flex;
+      align-items: center;
+      min-height: 180px;
+    }
+
+    .content-carrousel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      min-height: 180px;
     }
 
     .content-carrousel video {
       width: 40%;
-      max-width: 420px;
+      max-width: 500px;
       height: auto;
       border-radius: 8px;
       display: block;
+      margin: 0;
     }
 
+    /* Ajuste para la foto de perfil */
+    .avatar > img {
+      flex: 0 0 auto;
+      margin-left: 0;
+    }
+
+    /* Para pantallas muy pequeñas */
     @media (max-width: 768px) {
       .content-all {
-        margin-left: -10px;
+        min-height: 140px;
+      }
+      .content-carrousel {
+        min-height: 140px;
       }
       .content-carrousel video {
         width: 50%;
-        max-width: 280px;
+        max-width: 300px;
+      }
+      .avatar {
+        gap: 10px;
       }
     }
   </style>
@@ -66,11 +99,11 @@
       </div>
     </div>
     <img src="imagenes/yo.jpg" alt="Edgardo Talavera">
-  </div>
-  <div class="text" style="margin-left: 20px;">
-    <h2>Edgardo Talavera</h2>
-    <h4>Tech Lead · Senior Full Stack Developer</h4>
-    <br/>
+    <div class="text" style="margin-left: 20px;">
+      <h2>Edgardo Talavera</h2>
+      <h4>Tech Lead · Senior Full Stack Developer</h4>
+      <br/>
+    </div>
   </div>
 </header>
 
@@ -83,61 +116,76 @@
     <ul>
       <h4>CTI GROUP LLC (US)</h4>
       <li>Full Stack Developer · E‑commerce vehicles</li>
+
       <h4>CONSULTORES UNIVERSITARIOS (Perú)</h4>
       <li>Project Leader · AI recognition</li>
+
       <h4>COINCA (Venezuela)</h4>
       <li>Tech Lead / Full Stack · Inventory + AI (Llama 3)</li>
+
       <h4>E‑PAYCENTER (Paraguay)</h4>
       <li>Development Manager · Payment gateway</li>
+
       <h4>FOURMARKERING360 (Spain)</h4>
       <li>Full Stack Developer · Streaming telecom</li>
+
       <h4>Woow Córdoba (España)</h4>
       <li>Development Manager</li>
+
       <h4>Ecard.Center (Paraguay)</h4>
       <li>Development Manager</li>
-    </ul>
+
+         </ul>
   </div>
 
   <!-- CUADRO 2: SKILLS -->
   <div class="cuadro2">
     <br>
     <h4>SKILLS</h4>
+
     <h4>Frontend</h4>
     <ul>
       <li>Angular, React.js, Next.js, Vue</li>
       <li>TypeScript, JavaScript, Bootstrap, CSS3, HTML</li>
       <li>Blazor (básico)</li>
     </ul>
+
     <h4>Backend &amp; APIs</h4>
     <ul>
       <li>Node.js, Express, Python, FastAPI, Django</li>
       <li>PHP, Laravel, Spring Boot, .NET Core (básico)</li>
       <li>Full REST APIs, GraphQL (básico)</li>
     </ul>
+
     <h4>Databases</h4>
     <ul>
       <li>MySQL, PostgreSQL, SQL Server, PL/SQL</li>
       <li>MongoDB, Firebase</li>
     </ul>
+
     <h4>Real‑Time &amp; DevOps</h4>
     <ul>
       <li>WebSockets, Socket.io</li>
       <li>CI/CD (GitHub Actions, GitLab CI)</li>
       <li>Docker, Kubernetes (básico)</li>
     </ul>
+
     <h4>Mobile</h4>
     <ul>
       <li>React Native, Flutter, Ionic</li>
     </ul>
+
     <h4>Cloud &amp; Deployment</h4>
     <ul>
       <li>AWS, Azure, Digital Ocean, Heroku</li>
       <li>VPS, On‑premise (IIS, Apache, Tomcat, Nginx)</li>
     </ul>
+
     <h4>Security &amp; Auth</h4>
     <ul>
       <li>OAuth2, JWT, RBAC, OWASP basics</li>
     </ul>
+
     <h4>Methodologies</h4>
     <ul>
       <li>Agile, Scrum, Gitflow, JIRA, Azure DevOps</li>
@@ -202,7 +250,7 @@
     <br/>
   </footer>
 
-</div>
+</div> <!-- fin .contenido -->
 
 </body>
 </html>
